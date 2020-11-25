@@ -1,0 +1,5 @@
+#include "func.h"
+#include <vector>
+#include <string>
+
+std::vector<std::string> text;

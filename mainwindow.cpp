@@ -1,7 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include <QApplication>
 #include <QDebug>
+#include "sexy.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,12 +21,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QMessageBox::StandardButton b = QMessageBox::question(this, "Заголовок", "Text",
+    sexy window;
+    window.setModal(true);
+    window.exec();
+    //ui->AboveButton->setText("Оу, да");
+}
+
+void MainWindow::on_Exit_clicked()
+{
+    QMessageBox::StandardButton result = QMessageBox::question(this, "Вы точно хотите закрыть программу?", "Точно-точно?",
                           QMessageBox::Yes | QMessageBox::No);
-    if (b == QMessageBox::Yes) {
+    if (result == QMessageBox::Yes) {
         QApplication::quit();
     } else {
-        qDebug() << "No was yes";
+        qDebug() << "А-а-а, а кнопочку он то не нажал, хехе";
     }
-    //ui->AboveButton->setText("Оу, да");
 }
