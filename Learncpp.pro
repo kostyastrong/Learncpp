@@ -12,16 +12,16 @@ SOURCES += \
     func.cpp \
     main.cpp \
     mainwindow.cpp \
-    sexy.cpp
+    string2int.cpp
 
 HEADERS += \
     func.h \
     mainwindow.h \
-    sexy.h
+    string2int.h
 
 FORMS += \
     mainwindow.ui \
-    sexy.ui
+    string2int.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,9 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "string2int.h"
+#include "ui_string2int.h"
+#include "func.h"
+
 #include <QMessageBox>
 #include <QApplication>
 #include <QDebug>
-#include "sexy.h"
+#include <QTextEdit>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -18,22 +22,28 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_pushButton_clicked()
-{
-    sexy window;
-    window.setModal(true);
-    window.exec();
-    //ui->AboveButton->setText("Оу, да");
-}
-
 void MainWindow::on_Exit_clicked()
 {
-    QMessageBox::StandardButton result = QMessageBox::question(this, "Вы точно хотите закрыть программу?", "Точно-точно?",
+    QMessageBox::StandardButton result = QMessageBox::question(this, "Попадос", "Вы точно хотите закрыть программу?",
                           QMessageBox::Yes | QMessageBox::No);
     if (result == QMessageBox::Yes) {
         QApplication::quit();
     } else {
-        qDebug() << "А-а-а, а кнопочку он то не нажал, хехе";
+        qDebug() << "А-а-а, а кнопочку то он не нажал, хехе";
     }
+}
+
+
+void MainWindow::on_InsertStringFrom_clicked()
+{
+    string2int window;
+    window.setModal(true);
+    window.exec();
+}
+
+
+void MainWindow::on_InsertString_clicked()
+{
+    QTextEdit *txt = new QTextEdit();
+    txt->append("asdf");
 }
