@@ -54,4 +54,5 @@ void MainWindow::on_DeleteZeroes_clicked()
     onlynumber window;
     window.setModal(true);
     window.exec();
+    // ha-ha classic
 }
