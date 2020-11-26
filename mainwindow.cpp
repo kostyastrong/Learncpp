@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "string2int.h"
 #include "ui_string2int.h"
+#include "onlynumber.h"
 #include "func.h"
 
 #include <QMessageBox>
@@ -44,6 +45,13 @@ void MainWindow::on_InsertStringFrom_clicked()
 
 void MainWindow::on_InsertString_clicked()
 {
-    QTextEdit *txt = new QTextEdit();
-    txt->append("asdf");
+    QTextEdit *var = new QTextEdit();
+    var->append("string");
+}
+
+void MainWindow::on_DeleteZeroes_clicked()
+{
+    onlynumber window;
+    window.setModal(true);
+    window.exec();
 }

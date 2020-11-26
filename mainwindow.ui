@@ -34,6 +34,9 @@
        <layout class="QGridLayout" name="gridLayout">
         <item row="2" column="0">
          <widget class="QPushButton" name="InsertString">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
             <horstretch>0</horstretch>
@@ -153,7 +156,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Удалить ведущие нули</string>
+           <string>Удалить ведущие нули в количестве:</string>
           </property>
          </widget>
         </item>
@@ -212,7 +215,11 @@
        </layout>
       </item>
       <item row="2" column="1" rowspan="2">
-       <widget class="QTextEdit" name="textEdit"/>
+       <widget class="QTextEdit" name="textEdit">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>

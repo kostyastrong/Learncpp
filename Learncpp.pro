@@ -12,15 +12,18 @@ SOURCES += \
     func.cpp \
     main.cpp \
     mainwindow.cpp \
+    onlynumber.cpp \
     string2int.cpp
 
 HEADERS += \
     func.h \
     mainwindow.h \
+    onlynumber.h \
     string2int.h
 
 FORMS += \
     mainwindow.ui \
+    onlynumber.ui \
     string2int.ui
 
 # Default rules for deployment.

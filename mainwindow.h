@@ -22,6 +22,8 @@ private slots:
 
     void on_InsertString_clicked();
 
+    void on_DeleteZeroes_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
