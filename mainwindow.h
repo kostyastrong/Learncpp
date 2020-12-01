@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "onlynumber.h"
+#include "string2int.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,6 +25,8 @@ private slots:
     void on_InsertString_clicked();
 
     void on_DeleteZeroes_clicked();
+
+    void on_IncreaseFigures_clicked();
 
 private:
     Ui::MainWindow *ui;

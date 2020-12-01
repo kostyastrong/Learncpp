@@ -69,13 +69,13 @@
       </widget>
      </item>
      <item row="5" column="0" colspan="2">
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="strInput"/>
      </item>
      <item row="8" column="1">
-      <widget class="QLineEdit" name="lineEdit_3"/>
+      <widget class="QLineEdit" name="sNumber"/>
      </item>
      <item row="8" column="0">
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="fNumber"/>
      </item>
     </layout>
    </item>

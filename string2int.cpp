@@ -1,6 +1,6 @@
 #include "string2int.h"
 #include "ui_string2int.h"
-
+#include <func.h>
 string2int::string2int(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::string2int)
@@ -14,3 +14,10 @@ string2int::~string2int()
 }
 
 
+
+void string2int::on_Ok_clicked()
+{
+    QString str = ui->strInput->text();
+    int f = ui->fNumber->text().toInt();
+    //insert(str, n);
+}

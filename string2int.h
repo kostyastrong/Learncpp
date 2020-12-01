@@ -16,6 +16,8 @@ public:
     ~string2int();
 
 private slots:
+    void on_Ok_clicked();
+
 private:
     Ui::string2int *ui;
 };

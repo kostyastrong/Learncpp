@@ -45,8 +45,9 @@ void MainWindow::on_InsertStringFrom_clicked()
 
 void MainWindow::on_InsertString_clicked()
 {
-    QTextEdit *var = new QTextEdit();
-    var->append("string");
+    string2int window;
+    window.setModal(true);
+    window.exec();
 }
 
 void MainWindow::on_DeleteZeroes_clicked()
@@ -54,5 +55,13 @@ void MainWindow::on_DeleteZeroes_clicked()
     onlynumber window;
     window.setModal(true);
     window.exec();
-    // ha-ha classic
+
+    //auto list = ui->textEdit->toPlainText().trimmed().split('\n');
+}
+
+void MainWindow::on_IncreaseFigures_clicked()
+{
+    onlynumber window;
+    window.setModal(true);
+    window.exec();
 }
