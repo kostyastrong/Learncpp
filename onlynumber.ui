@@ -22,7 +22,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="numberInput"/>
+    <widget class="QLineEdit" name="Number"/>
    </item>
    <item>
     <widget class="QPushButton" name="Ok">

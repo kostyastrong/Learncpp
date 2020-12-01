@@ -28,6 +28,18 @@ private slots:
 
     void on_IncreaseFigures_clicked();
 
+    void on_DeleteBrackets_clicked();
+
+    void on_ReplaceSpecCharN_clicked();
+
+    void on_DeleteString_clicked();
+
+    void on_InsertStringMany_clicked();
+
+    void on_ReplaceChar_clicked();
+
+    void on_ReplaceString_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

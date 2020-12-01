@@ -65,3 +65,47 @@ void MainWindow::on_IncreaseFigures_clicked()
     window.setModal(true);
     window.exec();
 }
+
+void MainWindow::on_DeleteBrackets_clicked()
+{
+    onlynumber window;
+    window.setModal(true);
+    window.exec();
+    qDebug() << now1;
+
+}
+
+void MainWindow::on_ReplaceSpecCharN_clicked()
+{
+    onlynumber window;
+    window.setModal(true);
+    window.exec();
+}
+
+void MainWindow::on_DeleteString_clicked()
+{
+    string2int window;
+    window.setModal(true);
+    window.exec();
+}
+
+void MainWindow::on_InsertStringMany_clicked()
+{
+    string2int window;
+    window.setModal(true);
+    window.exec();
+}
+
+void MainWindow::on_ReplaceChar_clicked()
+{
+    string2int window;
+    window.setModal(true);
+    window.exec();
+}
+
+void MainWindow::on_ReplaceString_clicked()
+{
+    string2int window;
+    window.setModal(true);
+    window.exec();
+}

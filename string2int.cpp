@@ -19,5 +19,9 @@ void string2int::on_Ok_clicked()
 {
     QString str = ui->strInput->text();
     int f = ui->fNumber->text().toInt();
+    int s = ui->sNumber->text().toInt();
+    stringnow = str;
+    now1 = f;
+    now2 = s;
     //insert(str, n);
 }
