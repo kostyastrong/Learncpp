@@ -156,7 +156,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Удалить ведущие нули в количестве:</string>
+           <string>Удалить ведущие нули в диапозоне:</string>
           </property>
          </widget>
         </item>

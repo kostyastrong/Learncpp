@@ -105,10 +105,37 @@ void MainWindow::on_InsertString_clicked()
 
 void MainWindow::on_DeleteZeroes_clicked()
 {
-    onlynumber window;
+    string2int window;
     window.setModal(true);
     window.exec();
-
+    QString allT = ui->textEdit->toPlainText();
+    QStringList pieces = allT.split('\n');
+    ui->textEdit->clear();
+    for (int l = now1; l <= now2; ++l) {
+        int k = l - 1;
+        QString ret = "";
+        int i = 0;
+        for (; i < pieces[k].size();) {
+            if (pieces[k][i] != '0' || (i > 0 && pieces[k][i - 1] > '0' && pieces[k][i - 1] <= '9')) {
+                ret += pieces[k][i];
+                ++i;
+            } else {
+                bool ok = true;
+                int j = i + 1;
+                while (j < pieces[k].size() && pieces[k][j] == '0') {
+                    ++j;
+                }
+                if (j == pieces[k].size() || pieces[k][j] < '0' || pieces[k][j] > '9') {
+                    ret += '0';
+                }
+                i = j;
+            }
+        }
+        pieces[k] = ret;
+    }
+    for (auto i : pieces) {
+        ui->textEdit->append(i);
+    }
     //auto list = ui->textEdit->toPlainText().trimmed().split('\n');
 }
 
