@@ -40,6 +40,10 @@ void MainWindow::on_InsertStringFrom_clicked()
     string2int window;
     window.setModal(true);
     window.exec();
+    QString allT = ui->textEdit->toPlainText();
+    QStringList pieces = allT.split('\n');
+    ui->textEdit->setText(allT + stringnow);
+    qDebug() << stringnow;
 }
 
 
@@ -48,6 +52,28 @@ void MainWindow::on_InsertString_clicked()
     string2int window;
     window.setModal(true);
     window.exec();
+    QString allT = ui->textEdit->toPlainText();
+    QStringList pieces = allT.split('\n');
+    now1 = std::min(now1, pieces.size());
+    qDebug() << 1;
+    ui->textEdit->clear();
+
+    QStringList out;
+    for (int i = 0; i < now1; ++i) {
+        out.append(pieces.at(i));
+        //ui->textEdit->append(pieces.at(i));
+    }
+    //ui->textEdit->append(stringnow);
+    out.append(stringnow);
+    qDebug() << now1;
+    for (int i = now1; i < pieces.size(); ++i) {
+        out.append(pieces.at(i));
+        //ui->textEdit->append(pieces.at(i));
+    }
+
+    QString outstr = out.join('\n');
+    ui->textEdit->setText(outstr);
+    qDebug() << stringnow;
 }
 
 void MainWindow::on_DeleteZeroes_clicked()
@@ -71,7 +97,6 @@ void MainWindow::on_DeleteBrackets_clicked()
     onlynumber window;
     window.setModal(true);
     window.exec();
-    qDebug() << now1;
 
 }
 
